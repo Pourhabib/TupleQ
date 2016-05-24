@@ -7,18 +7,20 @@ import UIKit
 
 //
 
+var result: (language: String, greeting: String) = ("", "")
+
 func greeting(person person: String) -> (language: String, greeting: String) {
-    let language = "English"
-    let greeting = "Hello \(person)"
+    result.language = "English"
+    result.greeting = "Hello \(person)"
     
-    return (greeting,language)
+    return result
 }
 
 //I did this but it gives me a bummer! says :
 //You need assign the return value of the 'greeting' function to 'result'
 
 
-var result = greeting(person: "Tom")
+result = greeting(person: "Tom")
 
 print(result.greeting)
 
